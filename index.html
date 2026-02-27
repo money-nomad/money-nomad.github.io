@@ -13,11 +13,15 @@
 
   <style>
     :root {
-      --primary-color: #90C066;
-      --primary-dark: #7aa854;
+      --primary-color: #379F40;
+      --primary-light: #5cbd63;
       --text-color: #333;
-      --bg-color: #f9fbf7;
+      --bg-color: #f7fbf7;
       --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -26,194 +30,220 @@
       font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      line-height: 1.6;
+      line-height: 1.4;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 900px;
+      width: 100%;
       margin: 0 auto;
       padding: 0 20px;
     }
 
-    /* Hero Section */
     header {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
       color: var(--white);
-      padding: 80px 0;
+      padding: 40px 0;
       text-align: center;
-      border-bottom-left-radius: 50% 20px;
-      border-bottom-right-radius: 50% 20px;
-    }
-
-    .logo-container {
-      margin-bottom: 20px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      width: 100%;
     }
 
     .logo-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 28px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       background: white;
       padding: 5px;
-      object-fit: contain;
+      margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 3.5rem;
-      margin: 10px 0;
+      font-size: 2.5rem;
+      margin: 5px 0;
       font-weight: 800;
-      letter-spacing: -1px;
     }
 
     .tagline {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       opacity: 0.9;
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
-
-    /* Features Section */
-    .features {
-      padding: 80px 0;
+      margin: 0 auto;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 60px;
+      margin: 40px 0 30px;
+      width: 100%;
     }
 
     .section-title h2 {
-      font-size: 2.5rem;
-      color: var(--primary-dark);
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin: 0;
     }
 
     .feature-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+      width: 100%;
     }
 
     .feature-card {
       background: var(--white);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
       text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-10px);
     }
 
     .feature-icon {
-      width: 64px;
-      height: 64px;
-      margin-bottom: 20px;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
       fill: var(--primary-color);
     }
 
     .feature-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
+      font-size: 1.1rem;
+      margin: 0 0 8px;
       color: #2c3e50;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .community-section {
+      padding: 20px 0;
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    .community-card {
+      background-color: #f0f4eb;
+      padding: 40px 20px;
+      border-radius: 30px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .privacy-highlights {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .badge {
+      font-size: 0.8rem;
+      background: var(--white);
+      padding: 5px 12px;
+      border-radius: 15px;
+      border: 1px solid #e0e8dc;
     }
 
     footer {
       text-align: center;
-      padding: 60px 0;
+      padding: 30px 0;
       color: #888;
-      font-size: 0.9rem;
-      background-color: #f0f4eb;
+      font-size: 0.8rem;
     }
 
     .privacy-badge {
       display: inline-block;
-      padding: 5px 15px;
+      padding: 3px 12px;
       background: rgba(255,255,255,0.2);
-      border-radius: 20px;
-      font-size: 0.9rem;
-      margin-bottom: 20px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <div class="logo-container">
-        <img src="assets/logo.png" alt="Money Nomad Logo" class="logo-img">
-      </div>
+      <img src="assets/logo.png" alt="Money Nomad Logo" class="logo-img">
+      <p>
       <div class="privacy-badge">100% Private & Offline-First</div>
+      </p>
       <h1>Money Nomad</h1>
-      <p class="tagline">The map-centric personal finance tracker designed specifically for digital nomads and travelers.</p>
+      <p class="tagline">Map-centric personal finance tracker for digital nomads.</p>
     </div>
   </header>
 
-  <section class="features">
-    <div class="container">
-      <div class="section-title">
-        <h2>Built for the Journey</h2>
-        <p>Manage your finances across borders with geographic context and complete privacy.</p>
+  <section class="container">
+    <div class="section-title">
+      <h2>Built for the Journey</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg>
+        <h3>Map Tracking</h3>
+        <p>Visualize spending across the globe. Transactions tied to places.</p>
       </div>
 
-      <div class="feature-grid">
-        <!-- Map Feature -->
-        <div class="feature-card">
-          <svg class="feature-icon" viewBox="0 0 24 24">
-            <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
-          </svg>
-          <h3>Map-Centric Tracking</h3>
-          <p>Visualize your spending history across the globe. Every transaction is tied to a place, creating a geographic journey of your spending habits.</p>
-        </div>
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+        <h3>Smart Tags</h3>
+        <p>Flexible tagging for travel spending, from street food to transit.</p>
+      </div>
 
-        <!-- Tagging Feature -->
-        <div class="feature-card">
-          <svg class="feature-icon" viewBox="0 0 24 24">
-            <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
-          </svg>
-          <h3>Advanced Tagging</h3>
-          <p>Move beyond rigid categories. Our flexible tagging system captures the nuance of travel spending, from street food to cross-border transit.</p>
-        </div>
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24"><path d="M11.8 2.1L3 6.9V17.1L11.8 21.9L21 17.1V6.9L11.8 2.1ZM12 4.2L19 8.1L12 12L5 8.1L12 4.2ZM5 10.4L11 14.3V20.1L5 16.2V10.4ZM13 20.1V14.3L19 10.4V16.2L13 20.1Z"/></svg>
+        <h3>Multi-Currency</h3>
+        <p>Automated exchange rates keep your base currency views accurate.</p>
+      </div>
 
-        <!-- Multi-Currency Feature -->
-        <div class="feature-card">
-          <svg class="feature-icon" viewBox="0 0 24 24">
-            <path d="M11.8 2.1L3 6.9V17.1L11.8 21.9L21 17.1V6.9L11.8 2.1ZM12 4.2L19 8.1L12 12L5 8.1L12 4.2ZM5 10.4L11 14.3V20.1L5 16.2V10.4ZM13 20.1V14.3L19 10.4V16.2L13 20.1Z"/>
-          </svg>
-          <h3>Multi-Currency</h3>
-          <p>Seamlessly track expenses in local currencies. Automated exchange rate conversions keep your base currency view accurate and up-to-date.</p>
-        </div>
-
-        <!-- Offline Feature -->
-        <div class="feature-card">
-          <svg class="feature-icon" viewBox="0 0 24 24">
-            <path d="M21 11c0-4.97-4.03-9-9-9s-9 4.03-9 9c0 3.92 2.43 7.27 5.83 8.58L10.25 18c-2.51-.93-4.25-3.35-4.25-6 0-3.87 3.13-7 7-7s7 3.13 7 7c0 2.65-1.74 5.07-4.25 6l1.42 2.58C20.57 18.27 23 14.92 23 11zM12 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-10V1l-3 3 3 3V5c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 12.95 20 12.03 20 11c0-4.41-3.59-8-8-8z"/>
-          </svg>
-          <h3>Offline Reliability</h3>
-          <p>No signal? No problem. Money Nomad is fully functional without an internet connection using local-first storage. Your data never leaves your device.</p>
-        </div>
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24"><path d="M21 11c0-4.97-4.03-9-9-9s-9 4.03-9 9c0 3.92 2.43 7.27 5.83 8.58L10.25 18c-2.51-.93-4.25-3.35-4.25-6 0-3.87 3.13-7 7-7s7 3.13 7 7c0 2.65-1.74 5.07-4.25 6l1.42 2.58C20.57 18.27 23 14.92 23 11zM12 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-10V1l-3 3 3 3V5c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 12.95 20 12.03 20 11c0-4.41-3.59-8-8-8z"/></svg>
+        <h3>Offline-First</h3>
+        <p>Fully functional without signal. Data never leaves your device.</p>
       </div>
     </div>
   </section>
 
-  <section style="background-color: var(--white); padding: 80px 0; text-align: center;">
-    <div class="container">
-      <h2 style="color: var(--primary-dark); margin-bottom: 20px;">Your Financial Privacy First</h2>
-      <p style="max-width: 700px; margin: 0 auto 40px; font-size: 1.2rem;">We don't use tracking pixels, analytics frameworks, or cloud-syncing. Money Nomad is a tool for you, not for advertisers.</p>
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <div style="padding: 20px; border: 2px solid var(--bg-color); border-radius: 15px; min-width: 150px;">
-          <strong style="display: block; font-size: 1.5rem; color: var(--primary-color);">Local-First</strong>
-          Storage
-        </div>
-        <div style="padding: 20px; border: 2px solid var(--bg-color); border-radius: 15px; min-width: 150px;">
-          <strong style="display: block; font-size: 1.5rem; color: var(--primary-color);">Zero</strong>
-          Analytics
-        </div>
-        <div style="padding: 20px; border: 2px solid var(--bg-color); border-radius: 15px; min-width: 150px;">
-          <strong style="display: block; font-size: 1.5rem; color: var(--primary-color);">Total</strong>
-          Privacy
-        </div>
+  <section class="container community-section">
+    <div class="community-card">
+      <h2 style="color: var(--primary-color); margin-bottom: 10px; font-size: 1.5rem;">Join the Journey</h2>
+      <p style="margin-bottom: 25px; font-size: 1rem;">Help us shape the future of Money Nomad.</p>
+      
+      <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <a href="https://github.com/money-nomad/money-nomad.github.io/discussions" class="btn" style="background-color: var(--primary-color); color: white;">
+          <svg style="width: 18px; height: 18px; fill: currentColor;" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.17L4 17.17V4h16v12Z"/></svg>
+          Discussions
+        </a>
+        <a href="https://github.com/money-nomad/money-nomad.github.io/issues" class="btn" style="background-color: #444; color: white;">
+          <svg style="width: 18px; height: 18px; fill: currentColor;" viewBox="0 0 24 24"><path d="M14 12h-4v-2h4v2m0 4h-4v-2h4v2m1-9h-2V5h2v2m-7 0H6V5h2v2m11 9V9c0-3.87-3.13-7-7-7s-7 3.13-7 7v7c0 3.87 3.13 7 7 7s7-3.13 7-7m-2 0c0 2.76-2.24 5-5 5s-5-2.24-5-5V9c0-2.76 2.24-5 5-5s5 2.24 5 5v7Z"/></svg>
+          File a Bug
+        </a>
+      </div>
+
+      <div class="privacy-highlights">
+        <span class="badge">Local-First Storage</span>
+        <span class="badge">Zero Analytics</span>
+        <span class="badge">Total Privacy</span>
       </div>
     </div>
   </section>
@@ -221,7 +251,10 @@
   <footer>
     <div class="container">
       <p>&copy; 2026 Money Nomad. Tracking your money, wherever life takes you.</p>
-      <p style="margin-top: 10px; opacity: 0.7;">Available now for Android and iOS.</p>
+      <div style="margin-top: 10px; display: flex; justify-content: center; gap: 15px;">
+        <a href="privacy.html" style="color: var(--primary-dark); text-decoration: none;">Privacy Policy</a>
+        <span>Available for Android & iOS</span>
+      </div>
     </div>
   </footer>
 </body>
