@@ -178,12 +178,69 @@
       font-size: 0.8rem;
       margin-bottom: 10px;
     }
+
+    .screenshots-container {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 20px 0;
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary-color) #eee;
+    }
+
+    .screenshot-card {
+      flex: 0 0 280px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .screenshot-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .screenshot-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .screenshot-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .screenshot-info h4 {
+      margin: 0;
+      color: var(--primary-color);
+      font-size: 1rem;
+    }
+
+    .screenshots-section {
+      margin-bottom: 40px;
+    }
+
+    .hero-section {
+      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <img src="assets/logo.png" alt="Money Nomad Logo" class="logo-img">
+      <img src="assets/logo.avif" alt="Money Nomad Logo" class="logo-img">
       <p>
       <div class="privacy-badge">100% Private & Offline-First</div>
       </p>
@@ -191,6 +248,10 @@
       <p class="tagline">Map-centric personal finance tracker for digital nomads.</p>
     </div>
   </header>
+
+  <section class="container hero-section">
+    <img src="assets/overview-sales-pitch.avif" alt="Money Nomad Overview" class="hero-img">
+  </section>
 
   <section class="container">
     <div class="section-title">
@@ -220,6 +281,30 @@
         <svg class="feature-icon" viewBox="0 0 24 24"><path d="M21 11c0-4.97-4.03-9-9-9s-9 4.03-9 9c0 3.92 2.43 7.27 5.83 8.58L10.25 18c-2.51-.93-4.25-3.35-4.25-6 0-3.87 3.13-7 7-7s7 3.13 7 7c0 2.65-1.74 5.07-4.25 6l1.42 2.58C20.57 18.27 23 14.92 23 11zM12 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-10V1l-3 3 3 3V5c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 12.95 20 12.03 20 11c0-4.41-3.59-8-8-8z"/></svg>
         <h3>Offline-First</h3>
         <p>Fully functional without signal. Data never leaves your device.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container screenshots-section">
+    <div class="section-title">
+      <h2>See it in Action</h2>
+    </div>
+    <div class="screenshots-container">
+      <div class="screenshot-card">
+        <img src="assets/transaction_view.avif" alt="Transaction View">
+        <div class="screenshot-info"><h4>Easy Entry</h4></div>
+      </div>
+      <div class="screenshot-card">
+        <img src="assets/maps_view.avif" alt="Maps View">
+        <div class="screenshot-info"><h4>Map History</h4></div>
+      </div>
+      <div class="screenshot-card">
+        <img src="assets/stats_view.avif" alt="Statistics View">
+        <div class="screenshot-info"><h4>Deep Insights</h4></div>
+      </div>
+      <div class="screenshot-card">
+        <img src="assets/settings_view.avif" alt="Settings View">
+        <div class="screenshot-info"><h4>Fully Configurable</h4></div>
       </div>
     </div>
   </section>
