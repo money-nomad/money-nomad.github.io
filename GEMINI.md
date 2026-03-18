@@ -1,7 +1,7 @@
 # GEMINI.md - Money Nomad Landing Page
 
 ## Directory Overview
-This directory contains the source code for the official landing page of **Money Nomad**, a privacy-focused, map-centric personal finance tracker designed for travelers and digital nomads. The project is hosted on GitHub Pages (`money-nomad.github.io`).
+This directory contains the source code for the official landing page of **Money Nomad**, a privacy-focused, map-centric personal expense tracker designed for travelers and digital nomads. The project is hosted on GitHub Pages (`money-nomad.github.io`).
 
 The site is a simple, static web application consisting of a landing page and a privacy policy. It serves as the public face of the Money Nomad mobile application (available on Android and iOS).
 
